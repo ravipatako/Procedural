@@ -1,27 +1,28 @@
 /** @file main.cpp
- *  @brief Brief description of file.
+ *  @brief The main file for the procedural project.
  * //Procedural Project created by Ravi Pathak
- * //Done during the course of COP 2001.
+ * //Done during the course of COP 2001 in Summer of 2019.
  *
  *  @author Ravi Pathak
- *  @bug No known bugs.
+ *  @bug No known bugs currently.
  */
 
 #include <iostream>
 
 using namespace std;
 
-/** @brief Short description of function.
+/** @brief Creates the employee Account.
  *
- *  Longer description of function.
+ *  The functions takes info form the user and allows them
+ *  to create a new Employee Account
  *
- *  @param One for each parameter with the name and a description
+ *  @param none -- currently
  *  @return The word void or a description of what is returned
  */
 void createEmployeeAccount();
 
 int main() {
-    
+
     //Prints out the statements
     cout << "Production Line Tracker\n" << endl;
     cout << "1. Add Employee Account\n";
