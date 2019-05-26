@@ -8,7 +8,6 @@
  */
 
 #include <iostream>
-
 using namespace std;
 
 /** @brief Creates the employee Account.
@@ -20,6 +19,46 @@ using namespace std;
  *  @return The word void or a description of what is returned
  */
 void createEmployeeAccount();
+
+/** @brief Creates the employee Account.
+ *
+ *  The functions takes info form the user and allows them
+ *  to create a new Employee Account
+ *
+ *  @param none -- currently
+ *  @return The word void or a description of what is returned
+ */
+void addMusicPlayer();
+
+/** @brief Creates the employee Account.
+ *
+ *  The functions takes info form the user and allows them
+ *  to create a new Employee Account
+ *
+ *  @param none -- currently
+ *  @return The word void or a description of what is returned
+ */
+void addMoviePlayer();
+
+/** @brief Creates the employee Account.
+ *
+ *  The functions takes info form the user and allows them
+ *  to create a new Employee Account
+ *
+ *  @param none -- currently
+ *  @return The word void or a description of what is returned
+ */
+void showProduceStats();
+
+/** @brief Creates the employee Account.
+ *
+ *  The functions takes info form the user and allows them
+ *  to create a new Employee Account
+ *
+ *  @param none -- currently
+ *  @return The word void or a description of what is returned
+ */
+void closeProgram();
 
 int main() {
 
@@ -40,7 +79,18 @@ int main() {
         case 1:
             createEmployeeAccount();
             break;
-
+        case 2:
+            addMusicPlayer();
+            break;
+        case 3:
+            addMoviePlayer();
+            break;
+        case 4:
+            showProduceStats();
+            break;
+        case 5:
+            closeProgram();
+            break;
     }
 
 
@@ -48,4 +98,20 @@ int main() {
 
 void createEmployeeAccount() {
     cout << "You have are trying to add an Employee Account " << endl;
+}
+
+void addMusicPlayer() {
+    cout << "You have selected to add a new Music Player " << endl;
+}
+
+void addMoviePlayer() {
+    cout << "You have selected to add a movie Player " << endl;
+}
+
+void showProduceStats() {
+    cout << "You are looking to for the Production Statistics? " << endl;
+}
+
+void closeProgram() {
+    cout << "You have selected to add a new Music Player " << endl;
 }
