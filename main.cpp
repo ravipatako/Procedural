@@ -8,6 +8,7 @@
  */
 
 #include <iostream>
+
 using namespace std;
 
 /** @brief Creates the employee Account.
@@ -60,6 +61,9 @@ void showProduceStats();
  */
 void closeProgram();
 
+
+void invalidNumber();
+
 int main() {
 
     //Prints out the statements
@@ -91,17 +95,30 @@ int main() {
         case 5:
             closeProgram();
             break;
+        default:
+            invalidNumber();
     }
 
 
 }
 
 void createEmployeeAccount() {
-    cout << "You have are trying to add an Employee Account " << endl;
+    cout << "You have selected to create an Employee account " << endl;
 }
 
 void addMusicPlayer() {
     cout << "You have selected to add a new Music Player " << endl;
+    string manufacturer;
+    string musicPlayerName;
+    string musicType;
+
+    cout << "Please enter the manufacturer: " << endl;
+    cin >> manufacturer;
+
+    cout << "Please enter the model Name: " << endl;
+    cin >> musicPlayerName;
+
+    
 }
 
 void addMoviePlayer() {
@@ -114,4 +131,8 @@ void showProduceStats() {
 
 void closeProgram() {
     cout << "You have selected to add a new Music Player " << endl;
+}
+
+void invalidNumber() {
+    cout << "Sorry that's not an option" << endl;
 }
