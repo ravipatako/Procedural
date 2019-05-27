@@ -61,8 +61,24 @@ void showProduceStats();
  */
 void closeProgram();
 
-
+/** @brief Creates the employee Account.
+ *
+ *  The functions takes info form the user and allows them
+ *  to create a new Employee Account
+ *
+ *  @param none -- currently
+ *  @return The word void or a description of what is returned
+ */
 void invalidNumber();
+/** @brief Creates the employee Account.
+ *
+ *  The functions takes info form the user and allows them
+ *  to create a new Employee Account
+ *
+ *  @param none -- currently
+ *  @return The word void or a description of what is returned
+ */
+void menuLoop();
 
 int main() {
 
@@ -99,7 +115,9 @@ int main() {
             invalidNumber();
     }
 
-
+    while (selection > 6){
+        
+    }
 }
 
 void createEmployeeAccount() {
@@ -118,11 +136,19 @@ void addMusicPlayer() {
     cout << "Please enter the model Name: " << endl;
     cin >> musicPlayerName;
 
-    
 }
 
 void addMoviePlayer() {
     cout << "You have selected to add a movie Player " << endl;
+
+    cout << "Please enter the format: ";
+    string movieFormat;
+    cin >> movieFormat;
+
+    cout << "Please enter the media Type: " << endl;
+    string movieMediaType;
+    cin >> movieMediaType;
+
 }
 
 void showProduceStats() {
@@ -135,4 +161,8 @@ void closeProgram() {
 
 void invalidNumber() {
     cout << "Sorry that's not an option" << endl;
+}
+
+void menuLoop(){
+
 }
