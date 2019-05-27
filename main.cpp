@@ -115,8 +115,10 @@ int main() {
             invalidNumber();
     }
 
-    while (selection > 6){
-        
+    while (selection >= 6){
+        cout << "Sorry that option doesnt exist. " << endl;
+        cout << "Please reselect a number from the menu:" << endl;
+        cin >> selection;
     }
 }
 
