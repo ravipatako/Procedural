@@ -4,7 +4,7 @@
  * //Done during the course of COP 2001 in Summer of 2019.
  *
  *  @author Ravi Pathak
- *  @bug No known bugs currently.
+ *  @bug No known bugs currently .
  */
 
 #include <iostream>
