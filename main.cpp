@@ -21,20 +21,19 @@ using namespace std;
  */
 void createEmployeeAccount();
 
-/** @brief Creates the employee Account.
+/** @brief Adds a music player.
  *
- *  The functions takes info form the user and allows them
- *  to create a new Employee Account
+ *  User can choose to add a new Music Player and cna give input on
+ *  the type and format
  *
  *  @param none -- currently
  *  @return The word void or a description of what is returned
  */
 void addMusicPlayer();
 
-/** @brief Creates the employee Account.
+/** @brief Adds a movie Player.
  *
- *  The functions takes info form the user and allows them
- *  to create a new Employee Account
+ *  Allows the user to create a movie player and gives them
  *
  *  @param none -- currently
  *  @return The word void or a description of what is returned
@@ -78,48 +77,46 @@ void invalidNumber();
  *  @param none -- currently
  *  @return The word void or a description of what is returned
  */
-void menuLoop();
+void printMenu();
 
 int main() {
-
-    //Prints out the statements
-    cout << "Production Line Tracker\n" << endl;
-    cout << "1. Add Employee Account\n";
-    cout << "2. Add Music Player\n";
-    cout << "3. Add Movie Player\n";
-    cout << "4. Display Production Statistics\n";
-    cout << "5. Exit\n";
-
     int selection;
-    cout << "Please make your selection" << endl;
-    cin >> selection;
+    char repeat;
+    do {
+        printMenu();
 
-
-    switch (selection) {
-        case 1:
-            createEmployeeAccount();
-            break;
-        case 2:
-            addMusicPlayer();
-            break;
-        case 3:
-            addMoviePlayer();
-            break;
-        case 4:
-            showProduceStats();
-            break;
-        case 5:
-            closeProgram();
-            break;
-        default:
-            invalidNumber();
-    }
-
-    while (selection >= 6){
-        cout << "Sorry that option doesnt exist. " << endl;
-        cout << "Please reselect a number from the menu:" << endl;
+        cout << "Please make your selection" << endl;
         cin >> selection;
-    }
+
+
+        switch (selection) {
+            case 1:
+                createEmployeeAccount();
+                break;
+            case 2:
+                addMusicPlayer();
+                break;
+            case 3:
+                addMoviePlayer();
+                break;
+            case 4:
+                showProduceStats();
+                break;
+            case 5:
+                closeProgram();
+                break;
+            default:
+                invalidNumber();
+        }
+
+        while (selection >= 6 || selection <= 0) {
+            printMenu();
+            cout << "Please reselect a number from the menu:" << endl;
+            cin >> selection;
+        }
+        cout << "Would you like to go back to the menu? " << endl;
+        cin >> repeat;
+    } while (repeat == 'Y' ); // The do while loop was created from the CSO Chapter 5 slide 33
 }
 
 void createEmployeeAccount() {
@@ -165,6 +162,12 @@ void invalidNumber() {
     cout << "Sorry that's not an option" << endl;
 }
 
-void menuLoop(){
-
+void printMenu(){
+    //Prints out the statements
+    cout << "Production Line Tracker\n" << endl;
+    cout << "1. Add Employee Account\n";
+    cout << "2. Add Music Player\n";
+    cout << "3. Add Movie Player\n";
+    cout << "4. Display Production Statistics\n";
+    cout << "5. Exit\n";
 }
