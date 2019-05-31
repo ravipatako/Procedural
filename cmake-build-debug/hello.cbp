@@ -81,6 +81,9 @@
 		<Unit filename="/Users/ravipathak/CLionProjects/ProceduralProject/main.cpp">
 			<Option target="hello"/>
 		</Unit>
+		<Unit filename="/Users/ravipathak/CLionProjects/ProceduralProject/prototype.h">
+			<Option target="hello"/>
+		</Unit>
 		<Unit filename="/Users/ravipathak/CLionProjects/ProceduralProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
