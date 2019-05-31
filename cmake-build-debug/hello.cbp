@@ -81,6 +81,9 @@
 		<Unit filename="/Users/ravipathak/Documents/GitHub/Procedural/main.cpp">
 			<Option target="hello"/>
 		</Unit>
+		<Unit filename="/Users/ravipathak/Documents/GitHub/Procedural/prototype.h">
+			<Option target="hello"/>
+		</Unit>
 		<Unit filename="/Users/ravipathak/Documents/GitHub/Procedural/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
