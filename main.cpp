@@ -155,7 +155,7 @@ void showProduceStats() {
 }
 
 void closeProgram() {
-    cout << "You have selected to add a new Music Player " << endl;
+    cout << "Good Bye! " << endl;
 }
 
 void invalidNumber() {
