@@ -51,7 +51,7 @@ int main() {
         }
         cout << "Would you like to go back to the menu? " << endl;
         cin >> repeat;
-    } while (repeat == 'Y' || repeat == 'y' ); // The do while loop was created from the CSO Chapter 5 slide 33
+    } while (repeat == 'Y' || repeat == 'y'); // The do while loop was created from the CSO Chapter 5 slide 33
 }
 
 void createEmployeeAccount() {
@@ -98,10 +98,10 @@ void addMusicPlayer() {
     } else if (musicTypeMenu == 2) {
         cout << "You have selected Visual for the music Type. " << endl;
         musicType = "VI";
-    } else if (musicTypeMenu == 3){
+    } else if (musicTypeMenu == 3) {
         cout << "You have selected Audio Mobile for the music Type. " << endl;
         musicType = "AM";
-    } else if (musicTypeMenu == 4){
+    } else if (musicTypeMenu == 4) {
         cout << "You have selected Visual Mobile for the music Type. " << endl;
         musicType = "VM";
     } else {
@@ -114,12 +114,12 @@ void addMusicPlayer() {
 
     ofstream myfile;
     myfile.open("musicPlayer.txt", ios::app);
-    string serialName = manufacturer.substr(0,3);
-    for(int i = 1;i <= numProduced; i++){
+    string serialName = manufacturer.substr(0, 3);
+    for (int i = 1; i <= numProduced; i++) {
 
 
         myfile << "Production Number " << i << ": Serial Number: " << serialName << musicType << setw(5)
-        << setfill('0') << i << endl;
+               << setfill('0') << i << endl;
 
 
     }
@@ -143,7 +143,7 @@ void addMoviePlayer() {
         cout << "You have selected MP3 " << endl;
         movieFormat = "MP3";
     } else {
-       cout << "Please pick another item" << endl;
+        cout << "Please pick another item" << endl;
         cin >> formatMenu;
     }
 
@@ -157,7 +157,7 @@ void addMoviePlayer() {
     int mediaTypeMenu;
     cin >> mediaTypeMenu;
 
-    if (mediaTypeMenu == 1){
+    if (mediaTypeMenu == 1) {
         cout << "You have selected CD " << endl;
         movieMediaType = "CD ";
     } else if (mediaTypeMenu == 2) {
@@ -185,7 +185,7 @@ void invalidNumber() {
     cout << "Sorry that's not an option" << endl;
 }
 
-void printMenu(){
+void printMenu() {
     //Prints out the statements
     cout << "Production Line Tracker\n" << endl;
     cout << "1. Add Employee Account\n";
