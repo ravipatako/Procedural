@@ -11,4 +11,5 @@
     -Once created the serial numbers get saved to the file
     
     -For now its just for the MusicPlayer but MoviePlayer will be added very soon 
- When running the program be sure to click number 2 from Menu and follow the rest.
+ 
+ - When running the program be sure to click number 2 from Menu and follow the rest.
