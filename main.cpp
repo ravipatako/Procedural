@@ -113,16 +113,17 @@ void addMusicPlayer() {
     cin >> numProduced;
 
     ofstream myfile;
-
+    myfile.open("musicPlayer.txt", ios::app);
     string serialName = manufacturer.substr(0,3);
     for(int i = 1;i <= numProduced; i++){
-        myfile.open("musicPlayer.txt");
+
 
         myfile << "Production Number " << i << ": Serial Number: " << serialName << musicType << setw(5)
         << setfill('0') << i << endl;
 
-        myfile.close();
+
     }
+    myfile.close();
 }
 
 void addMoviePlayer() {
