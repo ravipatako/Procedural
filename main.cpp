@@ -154,7 +154,7 @@ void addMoviePlayer() {
         cout << "Please pick another item" << endl;
         cin >> formatMenu;
     }
-            /
+
 
     cout << "Please select the media Type: " << endl;
     cout << "1) CD " << endl;
