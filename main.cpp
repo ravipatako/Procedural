@@ -74,24 +74,27 @@ void createEmployeeAccount() {
 void addMusicPlayer() {
     cout << "You have selected to add a new Music Player " << endl;
 
-    string manufacturer;
+    string manufacturer; //Setting up variables for input later down in the function
     string musicPlayerName;
     string musicType;
-    int musicTypeMenu;
+    int musicTypeMenu; //integers for the menu
 
     cout << "Please enter the manufacturer: " << endl;
     cin >> manufacturer;
+                            //Getting the users input for the manufacturer and model name
 
     cout << "Please enter the model Name: " << endl;
     cin >> musicPlayerName;
 
-    cout << "Please select the item type from the menu: " << endl;
+    cout << "Please select the item type from the menu: " << endl; //Printing the menu and getting input
     cout << "1) MM - Audio " << endl;
     cout << "2) VI - Visual " << endl;
     cout << "3) AM - Audio Mobile " << endl;
     cout << "4) VM - Visual Mobile " << endl;
-    cin >> musicTypeMenu;
+    cin >> musicTypeMenu; // user inputting
 
+
+    //if statement to check for what the user inputted in the menu to assign it to the string
     if (musicTypeMenu == 1) {
         cout << "You have selected Audio for the music Type. " << endl;
         musicType = "MM";
@@ -112,12 +115,14 @@ void addMusicPlayer() {
     int numProduced;
     cin >> numProduced;
 
+    //User inputs the number of items they want produced
+
     ofstream myfile;
     myfile.open("musicPlayer.txt", ios::app);
     string serialName = manufacturer.substr(0, 3);
     for (int i = 1; i <= numProduced; i++) {
 
-
+        //Above the musicPlayer txt file opens and then the for loop allows to create multiple product
 
         myfile << "Production Number " << i << ": Serial Number: " << serialName << musicType << setw(5)
                << setfill('0') << i << endl;
@@ -129,14 +134,16 @@ void addMusicPlayer() {
 
 void addMoviePlayer() {
     cout << "You have selected to add a movie Player " << endl;
-    string movieFormat;
-    int formatMenu;
+    string movieFormat; //string input for the format type
+    int formatMenu; // to pick from the menu
 
     cout << "Please select the format from the menu: " << endl;
     cout << "1) WAV " << endl;
     cout << "2) MP3 " << endl;
-    cin >> formatMenu;
+    cin >> formatMenu; // getting input from the user for the mnenu
 
+            //Statement checks to see what the input was and depending on the int from the menu it
+            //assigns the the string movieFormat to its correct format
     if (formatMenu == 1) {
         cout << "You have selected WAV " << endl;
         movieFormat = "WAV";
@@ -147,7 +154,7 @@ void addMoviePlayer() {
         cout << "Please pick another item" << endl;
         cin >> formatMenu;
     }
-
+            /
 
     cout << "Please select the media Type: " << endl;
     cout << "1) CD " << endl;
@@ -179,15 +186,15 @@ void showProduceStats() {
 }
 
 void closeProgram() {
-    cout << "Good Bye! " << endl;
+    cout << "Good Bye! " << endl; //closes program
 }
 
 void invalidNumber() {
-    cout << "Sorry that's not an option" << endl;
+    cout << "Sorry that's not an option" << endl; //validation for the menu
 }
 
 void printMenu() {
-    //Prints out the statements
+    //Prints out the statements for the menu
     cout << "Production Line Tracker\n" << endl;
     cout << "1. Add Employee Account\n";
     cout << "2. Add Music Player\n";
