@@ -4,7 +4,8 @@
  * //Done during the course of COP 2001 in Summer of 2019.
  *
  *  @author Ravi Pathak
- *  @bug No known bugs currently
+ *  @bug The first bug discovered was a break when an infinite loop is creating if the exit (5) is pressed in the menu
+ *  and then replies to reprint the menu
  */
 
 #include <iostream>
