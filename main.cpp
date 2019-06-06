@@ -11,6 +11,7 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <string>
 #include "prototype.h"
 
 using namespace std;
@@ -82,7 +83,7 @@ void addMusicPlayer() {
 
     cout << "Please enter the manufacturer: " << endl;
     cin >> manufacturer;
-                            //Getting the users input for the manufacturer and model name
+    //Getting the users input for the manufacturer and model name
 
     cout << "Please enter the model Name: " << endl;
     cin >> musicPlayerName;
@@ -116,16 +117,26 @@ void addMusicPlayer() {
     int numProduced;
     cin >> numProduced;
 
-    //User inputs the number of items they want produced
+    int keepProductionTrack;
+    ofstream productionFile;
+    productionFile.open("productionHolder.txt", ios::app);
+                //Check to see if the file has 5 lines of data for the production start
+    string line;
+    while(getline(productionFile, line)){
 
+    }
+    productionFile.close();
+
+    //User inputs the number of items they want produced
     ofstream myfile;
     myfile.open("musicPlayer.txt", ios::app);
     string serialName = manufacturer.substr(0, 3);
-    for (int i = 1; i <= numProduced; i++) {
+    for (int i = 0; i <= numProduced; i++) {
+
 
         //Above the musicPlayer txt file opens and then the for loop allows to create multiple product
 
-        myfile << "Production Number " << i << ": Serial Number: " << serialName << musicType << setw(5)
+        myfile << "Production Number " << keepProductionTrack << ": Serial Number: " << serialName << musicType << setw(5)
                << setfill('0') << i << endl;
 
 
@@ -143,8 +154,8 @@ void addMoviePlayer() {
     cout << "2) MP3 " << endl;
     cin >> formatMenu; // getting input from the user for the mnenu
 
-            //Statement checks to see what the input was and depending on the int from the menu it
-            //assigns the the string movieFormat to its correct format
+    //Statement checks to see what the input was and depending on the int from the menu it
+    //assigns the the string movieFormat to its correct format
     if (formatMenu == 1) {
         cout << "You have selected WAV " << endl;
         movieFormat = "WAV";
