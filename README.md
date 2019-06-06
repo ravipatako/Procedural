@@ -13,3 +13,7 @@
     -For now its just for the MusicPlayer but MoviePlayer will be added very soon 
  
  - When running the program be sure to click number 2 from Menu and follow the rest.
+
+
+ - It seems when I try to commit and push I keep getting an erro along with an erro to pull the repo on
+    another computer
