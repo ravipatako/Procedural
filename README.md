@@ -11,6 +11,7 @@ The purpose of the program is track production for a manufacter. The programs al
 - Strings
 - Structs
 - Prototyping
+- Saving to txt
 
 **Useful Tools**
 - Jon from Cave of Programming [link to that here](https://caveofprogramming.com/)
