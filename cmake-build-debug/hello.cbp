@@ -81,17 +81,10 @@
 		<Unit filename="/Users/ravipathak/CLionProjects/ProceduralProject/main.cpp">
 			<Option target="hello"/>
 		</Unit>
-<<<<<<< HEAD
-		<Unit filename="/Users/ravipathak/Documents/GitHub/Procedural/prototype.h">
-			<Option target="hello"/>
-		</Unit>
-		<Unit filename="/Users/ravipathak/Documents/GitHub/Procedural/CMakeLists.txt">
-=======
 		<Unit filename="/Users/ravipathak/CLionProjects/ProceduralProject/prototype.h">
 			<Option target="hello"/>
 		</Unit>
 		<Unit filename="/Users/ravipathak/CLionProjects/ProceduralProject/CMakeLists.txt">
->>>>>>> 6aa527713ac62d1e20e53d614a404af77886e638
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

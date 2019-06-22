@@ -4,12 +4,6 @@
  * //Done during the course of COP 2001 in Summer of 2019.
  *
  *  @author Ravi Pathak
-<<<<<<< HEAD
- *  @bug No known bugs currently .
- */
-
-#include <iostream>
-=======
  *  @bug The first bug discovered was a break when an infinite loop is creating if the exit (5) is pressed in the menu
  *  and then replies to reprint the menu
  */
@@ -17,11 +11,20 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <vector>
 #include <string>
->>>>>>> 6aa527713ac62d1e20e53d614a404af77886e638
 #include "prototype.h"
 
 using namespace std;
+
+struct product {
+    string manufacter;
+    string modelName;
+    string productType;
+    int productionNumber;
+    string productionSerialNumber;
+};
+
 
 int main() {
     int selection;
@@ -60,11 +63,7 @@ int main() {
         }
         cout << "Would you like to go back to the menu? " << endl;
         cin >> repeat;
-<<<<<<< HEAD
-    } while (repeat == 'Y' ); // The do while loop was created from the CSO Chapter 5 slide 33
-=======
     } while (repeat == 'Y' || repeat == 'y'); // The do while loop was created from the CSO Chapter 5 slide 33
->>>>>>> 6aa527713ac62d1e20e53d614a404af77886e638
 }
 
 void createEmployeeAccount() {
@@ -72,35 +71,51 @@ void createEmployeeAccount() {
     cout << "Please enter the Employee Name: " << endl;
 
     string employeeName;
-    char employeeLast;
+    string employeeLast;
     int employeeFavNumber;
 
     cin >> employeeName;
-    cout << "PLease enter the employee's last name initial: " << endl;
+    cout << "PLease enter the employee's surname: " << endl;
     cin >> employeeLast;
     cout << "Please enter a favorite number to be assosciated with the employee: " << endl;
     cin >> employeeFavNumber;
 
+    for(int i =0; i < employeeFavNumber; i++){
+
+    }
 
 }
 
 void addMusicPlayer() {
-    cout << "You have selected to add a new Music Player " << endl;
+    vector <product> catalog;
 
-    string manufacturer; //Setting up variables for input later down in the function
-    string musicPlayerName;
-    string musicType;
-    int musicTypeMenu; //integers for the menu
+    cout << "You have selected to add a new Music Player " << endl;
+    product sample;
+
+    sample.manufacter = "Apple";
+    sample.modelName = "ipod ";
+    sample.productType = "VI";
+    sample.productionNumber = 1;
+    sample.productionSerialNumber = "0001";
+
+    catalog.push_back(sample);
+
+    int musicTypeMenu;
+    string productName;
+    string productModel;
+
+    //Above is where i got lost ^^ I tried to make the vector and then I wanted it to pushback the input
+    // But never got it to work so I stopped.
+
 
     cout << "Please enter the manufacturer: " << endl;
-    cin >> manufacturer;
+    cin >> productName;
+
     //Getting the users input for the manufacturer and model name
 
     cout << "Please enter the model Name: " << endl;
-    cin >> musicPlayerName;
+    cin >> productModel;
 
-<<<<<<< HEAD
-=======
     cout << "Please select the item type from the menu: " << endl; //Printing the menu and getting input
     cout << "1) MM - Audio " << endl;
     cout << "2) VI - Visual " << endl;
@@ -112,16 +127,16 @@ void addMusicPlayer() {
     //if statement to check for what the user inputted in the menu to assign it to the string
     if (musicTypeMenu == 1) {
         cout << "You have selected Audio for the music Type. " << endl;
-        musicType = "MM";
+        //musicType = "MM";
     } else if (musicTypeMenu == 2) {
         cout << "You have selected Visual for the music Type. " << endl;
-        musicType = "VI";
+        //musicType = "VI";
     } else if (musicTypeMenu == 3) {
         cout << "You have selected Audio Mobile for the music Type. " << endl;
-        musicType = "AM";
+        //musicType = "AM";
     } else if (musicTypeMenu == 4) {
         cout << "You have selected Visual Mobile for the music Type. " << endl;
-        musicType = "VM";
+        //musicType = "VM";
     } else {
         cout << "Please select an item number from the menu. " << endl;
     }
@@ -130,46 +145,39 @@ void addMusicPlayer() {
     int numProduced;
     cin >> numProduced;
 
-    int keepProductionTrack;
-    ofstream productionFile;
-    productionFile.open("productionHolder.txt", ios::app);
-                //Check to see if the file has 5 lines of data for the production start
-    string line;
-    while(getline(productionFile, line)){
 
+    ifstream totalNumber;
+    totalNumber.open("productionHolder.txt", ios::app);
+    int totalProduction = 0;
+    int numMM = 0;
+    int numVI = 0;
+    int numAM = 0;
+    int numVM = 0;
+    if (totalNumber) {
+        totalNumber >> totalProduction >> numMM >> numVI >> numAM >> numVM;
     }
-    productionFile.close();
+    totalNumber.close();
+
+
 
     //User inputs the number of items they want produced
     ofstream myfile;
-    myfile.open("musicPlayer.txt", ios::app);
-    string serialName = manufacturer.substr(0, 3);
+    myfile.open("catalog.txt", ios::app);
+    string serialName = productName.substr(0, 3);
     for (int i = 0; i <= numProduced; i++) {
-
 
         //Above the musicPlayer txt file opens and then the for loop allows to create multiple product
 
-        myfile << "Production Number " << keepProductionTrack << ": Serial Number: " << serialName << musicType << setw(5)
+        myfile << "Production Number " << totalProduction << ": Serial Number: " << serialName << setw(5)
                << setfill('0') << i << endl;
 
-
     }
+
     myfile.close();
->>>>>>> 6aa527713ac62d1e20e53d614a404af77886e638
 }
 
 void addMoviePlayer() {
     cout << "You have selected to add a movie Player " << endl;
-<<<<<<< HEAD
-
-    cout << "Please enter the format: ";
-    string movieFormat;
-    cin >> movieFormat;
-
-    cout << "Please enter the media Type: " << endl;
-    string movieMediaType;
-    cin >> movieMediaType;
-=======
     string movieFormat; //string input for the format type
     int formatMenu; // to pick from the menu
 
@@ -191,7 +199,7 @@ void addMoviePlayer() {
         cin >> formatMenu;
     }
 
-
+    //gets the input from user on movie player
     cout << "Please select the media Type: " << endl;
     cout << "1) CD " << endl;
     cout << "2) DVD " << endl;
@@ -214,7 +222,6 @@ void addMoviePlayer() {
         cout << "Please repick from the menu: " << endl;
         cin >> mediaTypeMenu;
     }
->>>>>>> 6aa527713ac62d1e20e53d614a404af77886e638
 
 }
 
@@ -223,17 +230,6 @@ void showProduceStats() {
 }
 
 void closeProgram() {
-<<<<<<< HEAD
-    cout << "Good Bye! " << endl;
-}
-
-void invalidNumber() {
-    cout << "Sorry that's not an option" << endl;
-}
-
-void printMenu(){
-    //Prints out the statements
-=======
     cout << "Good Bye! " << endl; //closes program
 }
 
@@ -243,7 +239,6 @@ void invalidNumber() {
 
 void printMenu() {
     //Prints out the statements for the menu
->>>>>>> 6aa527713ac62d1e20e53d614a404af77886e638
     cout << "Production Line Tracker\n" << endl;
     cout << "1. Add Employee Account\n";
     cout << "2. Add Music Player\n";

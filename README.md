@@ -1,23 +1,19 @@
-# Procedural Project
-## Done in COP 2001 (Programming methodology) - May 2019 - June 1029
+# Procedural
+# As of 05/17/2019 the Repo has finished Procedural Project 1
 
-**Program's purpose**
-The purpose of the program is track production for a manufacter. The programs allows the user to sign into their own accout and generate products that will be created on a production line. The user is also able to pullback previous products and create more of them. The program also saves all production to a local txt file so that once the program is ran through multiple times the data is still saved.
-
-
-
-**The Programming Concepts learned**
-- Arrays/Vectors
-- Strings
-- Structs
-- Prototyping
-- Saving to txt
-
-**Useful Tools**
-- Jon from Cave of Programming [link to that here](https://caveofprogramming.com/)
-- Hackerrank
-- A big one for me was Reddit. I use it daily and start using it to get help too, on my code.
-- Professor Vanselow - anytime I was lost or didnt understand something I texted him ASAP
-- Swebok
+# As of 06/02/2019 finally finished and fixed the items from Procedural Project 2
+  - Items completed
+    
+    -Needed help understanding the loop and then start finishing up the input
+    
+    -Got the items to be produced and then the serial numbers are created
+    
+    -Once created the serial numbers get saved to the file
+    
+    -For now its just for the MusicPlayer but MoviePlayer will be added very soon 
+ 
+ - When running the program be sure to click number 2 from Menu and follow the rest.
 
 
+ - It seems when I try to commit and push I keep getting an erro along with an erro to pull the repo on
+    another computer
